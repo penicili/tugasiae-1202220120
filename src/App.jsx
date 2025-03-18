@@ -76,7 +76,7 @@ const App = () => {
           value={pokemonId}
           onChange={handleInputChange}
           className="w-16 text-center border rounded py-2"
-          min="1"
+          min={0}
         />
         
         <button 
@@ -137,7 +137,7 @@ const App = () => {
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div 
-                      className="bg-blue-500 h-2 rounded-full" 
+                      className={`h-2 rounded-full ${shiny ? "bg-yellow-500" : "bg-green-500"}`}
                       style={{ width: `${Math.min(100, (stat.base_stat / 255) * 100)}%` }}
                     ></div>
                   </div>
